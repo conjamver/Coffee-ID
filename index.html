@@ -15,6 +15,13 @@
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
         
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        
+       <!-- development version, includes helpful console warnings -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        
+        
         <title>Coffee ID maker</title>
         
         <!-- Meta Tags -->
@@ -33,26 +40,51 @@
                 <div class="col-md-8">
                     <div id="coffeeInterface">
                          <!-- Title -->
-                        <h1 id="coffeeTitle" class="text-center">Enter your details</h1>
+                        <h1 id="coffeeTitle" class="text-center"><i class="fas fa-coffee"></i> Enter your details</h1>
                          <!-- Form and settings -->
                         <div class="row">
                             <div class="col-md-8">
-                                <form>
-                                    <!-- First name input -->
-                                    <div class="form-group">
+                                <!--VUE APP-->
+                                <form id="app">
+                                    <!-- First name and lastname input -->
+                                    <div class="form-group" style="">
                                         <label for="fname">First Name:</label>
-                                        <input type="text" class="form-control" id="fname" maxlength="16">
-                                    </div>
-                                    <!-- Last name input -->
-                                    <div class="form-group">
+                                        <input v-model.trim="firstName" type="text" class="form-control" id="fname" maxlength="16" placeholder="Enter your firstname">
                                         <label for="lname">Last Name:</label>
-                                        <input type="text" class="form-control" id="lname" maxlength="16">
+                                        <input v-model.trim="lastName" type="text" class="form-control" id="lname" maxlength="16" placeholder="Enter your lastname">
                                     </div>
+                                
+                                    <div class="form-group">
+                                        <label for="sugar">Sugar/Sweetner:</label>
+                                        <select v-model="sugar" class="form-control" id="sugar">
+                                            <option disabled selected>--- Please Select ---</option>
+                                            <option>None</option>
+                                            <option>Sugar</option>
+                                            <option>Raw Sugar</option>
+                                            <option>Sweetner</option>
+                                            <option>Honey</option>
+                                        </select>
+                                        <label for="sugar">Quantity:</label>
+                                        <select v-model="" class="form-control" id="">
+                                            <option disabled selected>--- Please Select ---</option>
+                                            <option>1 teaspoon</option>
+                                            <option>2 teaspoons</option>
+                                            <option>3 teaspoons</option>
+                                            <option>4 teaspoons</option>
+                                            
+                                        </select>
+                                    </div>
+                                    <hr>
+                                    <span>{{firstName}}</span>
+                                    <span>{{lastName | uppercase}}</span>
+                                    <br>
+                                    <span>I like having {{sugar}}</span>
                                 </form>
                                 
                             </div>
                              <div class="col-md-4">
-                            Profile Details go here
+                           
+                              
                             </div>
                         </div>
                     </div>
@@ -62,5 +94,6 @@
                 </div>
             </div>
         </div>
+        <script src="js/app.js"></script>
     </body>
 </html>
