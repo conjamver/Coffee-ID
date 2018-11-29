@@ -1,0 +1,19 @@
+body {
+  background: url("../img/coffee_bg_filtered.jpg");
+  background-size: cover;
+  color: #f3f3f3; }
+
+#coffeeInterface {
+  background-color: #513a29;
+  margin: 60px 0px;
+  padding: 30px;
+  border-radius: 4px; }
+
+#coffeeTitle {
+  border-bottom: solid 2px #826752; }
+
+/* form styles */
+label {
+  font-weight: bold; }
+
+/*# sourceMappingURL=main.css.map */
