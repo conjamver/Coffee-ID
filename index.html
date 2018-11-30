@@ -37,7 +37,7 @@
                 <div class="col-md-2">
                 </div>
                 <!-- Application Interface -->
-                <div class="col-md-8">
+                <div class="col-md-8" id="app">
                     <div id="coffeeInterface">
                          <!-- Title -->
                         <h1 id="coffeeTitle" class="text-center"><i class="fas fa-coffee"></i> Enter your details</h1>
@@ -45,49 +45,91 @@
                         <div class="row">
                             <div class="col-md-8">
                                 <!--VUE APP-->
-                                <form id="app">
+                                <form>
                                     <!-- First name and lastname input -->
-                                    <div class="form-group" style="">
-                                        <label for="fname">First Name:</label>
-                                        <input v-model.trim="firstName" type="text" class="form-control" id="fname" maxlength="16" placeholder="Enter your firstname">
-                                        <label for="lname">Last Name:</label>
-                                        <input v-model.trim="lastName" type="text" class="form-control" id="lname" maxlength="16" placeholder="Enter your lastname">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="fname">First Name:</label><br>
+                                                <input v-model.trim="firstName" type="text" class="" id="fname" maxlength="16" placeholder="Enter your firstname">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="lname">Last Name:</label><br>
+                                                <input v-model.trim="lastName" type="text" class="" id="lname" maxlength="16" placeholder="Enter your lastname">
+                                            </div>
+                                        </div>
+                                 
+                                    <!-- Sugar and Quantity Selector -->
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="sugar">Sugar/Sweetner:</label>
+                                            <select class="" id="sugar">
+                                                <option disabled selected>--- Please Select ---</option>
+                                                <option value="1">None</option>
+                                                <option >Sugar</option>
+                                                <option>Raw Sugar</option>
+                                                <option>Sweetner</option>
+                                                <option>Honey</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="quantity">Quantity:</label>
+                                            <select class="" id="quantity">
+                                                <option disabled selected >--- Please Select ---</option>
+                                                <option>1 teaspoon</option>
+                                                <option>2 teaspoons</option>
+                                                <option>3 teaspoons</option>
+                                                <option>4 teaspoons</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                
-                                    <div class="form-group">
-                                        <label for="sugar">Sugar/Sweetner:</label>
-                                        <select v-model="sugar" class="form-control" id="sugar">
-                                            <option disabled selected>--- Please Select ---</option>
-                                            <option>None</option>
-                                            <option>Sugar</option>
-                                            <option>Raw Sugar</option>
-                                            <option>Sweetner</option>
-                                            <option>Honey</option>
-                                        </select>
-                                        <label for="sugar">Quantity:</label>
-                                        <select v-model="" class="form-control" id="">
-                                            <option disabled selected>--- Please Select ---</option>
-                                            <option>1 teaspoon</option>
-                                            <option>2 teaspoons</option>
-                                            <option>3 teaspoons</option>
-                                            <option>4 teaspoons</option>
-                                            
-                                        </select>
+                                       <!-- Coffee Strength settings -->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label>Coffee Strength:</label>
+                                            <br>
+                                            <input type="radio" name="strength"> Weak
+                                            <input type="radio" name="strength"> Normal
+                                            <input type="radio" name="strength"> Strong
+                                        </div>
                                     </div>
-                                    <hr>
-                                    <span>{{firstName}}</span>
-                                    <span>{{lastName | uppercase}}</span>
-                                    <br>
-                                    <span>I like having {{sugar}}</span>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                           <label for="milk">Milk Type</label>
+                                            <select class="" id="quantity">
+                                                <option disabled selected >--- Please Select ---</option>
+                                                <option>None</option>
+                                                <option>Full Cream</option>
+                                                <option>Low Fat</option>
+                                                <option>Lactose free</option>
+                                                <option>Soy Milk</option>
+                                                <option>Almond Milk</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </form>
-                                
                             </div>
-                             <div class="col-md-4">
-                           
+                            <!--Profile Image Selector-->
+                            <div class="col-md-4">
+                                <label for="avater">Avater: </label>
+                                <img id="avatar" src="https://via.placeholder.com/150">
                               
                             </div>
                         </div>
+                        <!--END OF FORM AND SETTINGS-->
+                        <!--PREVIEW SECTION-->
+                        <hr>
+                        <div class="row">
+                        <div class="col-md-4">
+                            picture goes here
+                        </div>
+                        <div class="col-md-8">
+                        <span>{{firstName}}</span>
+                        <span>{{lastName | capitalize}}</span>
+                       
+                        </div>
+                        </div>
                     </div>
+                     
                 </div>
                  <!-- Application Space-->
                 <div class="col-md-2">
