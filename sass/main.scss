@@ -4,6 +4,10 @@ $light_brown: #826752;
 $dark_brown: #3b2512;
 $cream: #c4a489;
 
+//input field borders
+$iborder: 4px;
+
+
 body{
     background:url("../img/coffee_bg_filtered.jpg");
     background-size:cover;
@@ -26,6 +30,12 @@ body{
 label{
     font-weight: bold;
     display:inline-block;
+    background-color:$dark-brown;
+    padding:0;
+    margin:0;
+    width:100%;
+    border-radius:  $iborder $iborder 0 0 ;
+    padding-left:6px;
 }
 
 input[type=text], select{
@@ -33,7 +43,7 @@ input[type=text], select{
     padding: 4px 6px;
     margin: 0 0 4px 0;
     border: none;
-    border-radius:4px;
+    border-radius:  0 0 $iborder $iborder;
     box-sizing: border-box;
     background-color:$light_brown;
     color: $white;
@@ -41,7 +51,23 @@ input[type=text], select{
 input[type="radio"]{
     margin: 0 0 0 16px;
 }
+
+#inputRadio{
+    background-color:$light-brown;
+    margin-bottom: 4px;
+
+}
+img#avatar{
+    margin-bottom:4px;
+}
+
 ::placeholder{
     color:grey;
     font-style: italic;
+}
+
+/*Preview styling*/
+.previewName{
+    font-size:26px;
+    font-weight:600;
 }

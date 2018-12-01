@@ -17,14 +17,20 @@ body {
 /* form styles */
 label {
   font-weight: bold;
-  display: inline-block; }
+  display: inline-block;
+  background-color: #3b2512;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+  padding-left: 6px; }
 
 input[type=text], select {
   width: 100%;
   padding: 4px 6px;
   margin: 0 0 4px 0;
   border: none;
-  border-radius: 4px;
+  border-radius: 0 0 4px 4px;
   box-sizing: border-box;
   background-color: #826752;
   color: #f3f3f3; }
@@ -32,8 +38,20 @@ input[type=text], select {
 input[type="radio"] {
   margin: 0 0 0 16px; }
 
+#inputRadio {
+  background-color: #826752;
+  margin-bottom: 4px; }
+
+img#avatar {
+  margin-bottom: 4px; }
+
 ::placeholder {
   color: grey;
   font-style: italic; }
+
+/*Preview styling*/
+.previewName {
+  font-size: 26px;
+  font-weight: 600; }
 
 /*# sourceMappingURL=main.css.map */

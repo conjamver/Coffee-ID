@@ -50,11 +50,11 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <label for="fname">First Name:</label><br>
-                                                <input v-model.trim="firstName" type="text" class="" id="fname" maxlength="16" placeholder="Enter your firstname">
+                                                <input v-model.trim="firstName" type="text" class="" id="fname" maxlength="12" placeholder="Enter your firstname">
                                             </div>
                                             <div class="col-md-6">
                                                 <label for="lname">Last Name:</label><br>
-                                                <input v-model.trim="lastName" type="text" class="" id="lname" maxlength="16" placeholder="Enter your lastname">
+                                                <input v-model.trim="lastName" type="text" class="" id="lname" maxlength="12" placeholder="Enter your lastname">
                                             </div>
                                         </div>
                                  
@@ -82,17 +82,20 @@
                                             </select>
                                         </div>
                                     </div>
-                                       <!-- Coffee Strength settings -->
+                                       <!-- Coffee Strength settings RADIO BUTTONS -->
                                     <div class="row">
                                         <div class="col-md-12">
                                             <label>Coffee Strength:</label>
-                                            <br>
-                                            <input type="radio" name="strength"> Weak
-                                            <input type="radio" name="strength"> Normal
-                                            <input type="radio" name="strength"> Strong
+                                                <br>
+                                                <div id="inputRadio">
+                                                <input type="radio" name="strength"> Weak
+                                                <input type="radio" name="strength"> Normal
+                                                <input type="radio" name="strength"> Strong
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="row">
+                                        <!-- Choosing your milk SELECTOR-->
                                         <div class="col-md-12">
                                            <label for="milk">Milk Type</label>
                                             <select class="" id="quantity">
@@ -106,6 +109,7 @@
                                             </select>
                                         </div>
                                     </div>
+                                    <!-- END OF FORM-->
                                 </form>
                             </div>
                             <!--Profile Image Selector-->
@@ -125,14 +129,13 @@
                         <!--PREVIEW SECTION-->
                         <hr>
                         <div class="row">
-                        <div class="col-md-4">
-                            picture goes here
-                        </div>
-                        <div class="col-md-8">
-                        <span>{{firstName}}</span>
-                        <span>{{lastName | capitalize}}</span>
-                       
-                        </div>
+                            <div class="col-md-4">
+                                <img src="img/cubeAvatar.png" id="avatarPreview" class="img-fluid rounded">
+                            </div>
+                            <div class="col-md-8">
+                                <span class="previewName">{{firstName}}</span>
+                                <span class="previewName">{{lastName}}</span>
+                            </div>
                         </div>
                     </div>
                      
