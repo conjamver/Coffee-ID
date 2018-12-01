@@ -19,7 +19,7 @@ body{
 }
 #coffeeTitle{
     border-bottom: solid 2px $light_brown;
-    padding:4px;
+    padding:12px;
 }
 
 /* form styles */
@@ -43,4 +43,5 @@ input[type="radio"]{
 }
 ::placeholder{
     color:grey;
+    font-style: italic;
 }

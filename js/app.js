@@ -6,28 +6,25 @@ var app = new Vue({
   },
 methods:{
     //Change Image url FUNCTION
-        AvaterSelect: function(){
+        AvatarSelect: function(){
             //selecting elements and array of images
-            var avaterSelect = document.getElementById("avaterSelect");
-            var avater = document.getElementById("avater");
-            var avaterArray = ["../img/ninjaAvater.png","../img/vampireAvater.png","../img/robotAvater.png"];
+            var avatarSelect = document.getElementById("avatarSelect");
+            var avatar = document.getElementById("avatar");
+            var avatarArray = ["img/ninjaAvatar.png","img/vampireAvatar.png","img/robotAvatar.png", "img/cubeAvatar.png"];
             //Changing the image 
-            switch(avaterSelect.value){
-                    
+            switch(avatarSelect.value){
+                case "0":
+                    avatar.src=avatarArray[3];
+                    break;
                 case "1":
-                    alert("test");
-                    avatar.src="test.png";
+                    avatar.src=avatarArray[0];
                     break;
                 case "2":
-                    avatar.src=avaterArray[1];
+                    avatar.src=avatarArray[1];
                     break;
                 case "3":
-                    avatar.src=avaterArray[2];
+                    avatar.src=avatarArray[2];
                     break;
-                case "0":
-                    avatar.src="test.png";
-                    break;
-                    
             }
        } 
     }

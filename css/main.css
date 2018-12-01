@@ -12,7 +12,7 @@ body {
 
 #coffeeTitle {
   border-bottom: solid 2px #826752;
-  padding: 4px; }
+  padding: 12px; }
 
 /* form styles */
 label {
@@ -33,6 +33,7 @@ input[type="radio"] {
   margin: 0 0 0 16px; }
 
 ::placeholder {
-  color: grey; }
+  color: grey;
+  font-style: italic; }
 
 /*# sourceMappingURL=main.css.map */
